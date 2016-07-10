@@ -54,6 +54,59 @@ def item_cost(state, price):
 #        we're from the same place!", or "Hi 'full name here', where are you 
 #        from?" depending on what `is_hometown()` evaluates to.
 
+def is_berry(fruit):
+    """Takes the name of a fruit as a string and returns a boolean.
+    If strawberry, cherry or blackberry are passed in, will return True.
+    """
+
+    if fruit == "strawberry" or fruit == "blackberry" or fruit == "cherry":
+        return True
+    else:
+        return False
+
+
+def shipping_cost(fruit):
+    """Calculates shipping cost using the is_berry function
+    Takes the fruit name as a string, calls the is_berry function and returns
+    0 if the fruit is True in is_berry, and 5 if False.
+    """
+
+    if is_berry(fruit) is True:
+        return 0
+    if is_berry(fruit) is False:
+        return 5
+
+
+def is_hometown(town_name):
+    """Takes a town name as a string, and returns True if that town is Boulder
+    and False if not.
+    """
+
+    if town_name == "Boulder" or town_name == "boulder":
+        return True
+    else:
+        return False
+
+
+def full_name(first_name, last_name):
+    """Takes a first and last name as strings and concatenates them."""
+
+    return first_name + " " + last_name
+
+
+def hometown_greeting(town_name, first_name, last_name):
+    """Returns a greeting depending on the results from is_hometown and full_name functions.
+    Takes a town name, a first and a last name as strings as arguments, calls
+    is_hometown and full_name functions, and returns a greeting depending on the
+    output of those two functions.
+    """
+
+    if is_hometown(town_name) is False:
+        return "Hi " + full_name(first_name, last_name) + ", where are you from?"
+    if is_hometown(town_name) is True:
+        return "Hi " + full_name(first_name, last_name) + ", we're from the same place!"
+
+
 #####################################################################
 
 # PART THREE
