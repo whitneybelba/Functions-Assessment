@@ -135,6 +135,10 @@ print increment(2)
 
 
 def num_list_append(number, num_list):
+    """Appends a number to a list.
+    Takes a number and a list of numbers as arguments, and appends the number
+    to the end of the list."""
+
     num_list.append(number)
     return num_list
 
