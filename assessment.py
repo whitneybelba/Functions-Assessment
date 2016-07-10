@@ -121,4 +121,23 @@ def hometown_greeting(town_name, first_name, last_name):
 # 3. Make a function that takes in a number and a list of numbers. It should append
 #    the number to the list of numbers and return the list.
 
+def increment(x):
+    def add(y):
+        x = 1
+        return x + y
+    return add(1)
+    
+print increment(2)
+
+# The above function is what I started for PART THREE #1 and #2, but then I got 
+# super confused on this one and decided to save it for another time. 
+# PART THREE #3 below...
+
+
+def num_list_append(number, num_list):
+    num_list.append(number)
+    return num_list
+
+
+
 #####################################################################
